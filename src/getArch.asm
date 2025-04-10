@@ -48,9 +48,15 @@
 %endmacro
 
 
+
 section .data
   msg32 db "The CPU architecture is 32-bit.", 0xA, 0
   len32 equ $ - msg32
 
   msg64 db "The CPU architecture is 64-bit.", 0xA, 0
   len64 equ $ - msg64
+
+
+
+section .bss
+  arch resb 1
