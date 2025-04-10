@@ -60,3 +60,23 @@ section .data
 
 section .bss
   arch resb 1
+
+
+
+section .text
+  global _start
+
+
+_start:
+  getArch
+  mov [arch], al
+
+  cmp byte [arch], 0
+  je .print32
+
+  print byte [arch], msg64, len64
+  exit byte [arch], 0
+
+
+.print32:
+  print byte [arch], msg32, len32
