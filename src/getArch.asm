@@ -43,7 +43,7 @@
 
 %%__exit:
   mov rax, 60
-  xor rdi, %2
+  mov rdi, %2
   syscall
 %endmacro
 
