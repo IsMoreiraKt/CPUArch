@@ -1,4 +1,4 @@
-# GetArch
+# CPUArch
 
 This is an Assembly script that detects the CPU architecture (32-bit or 64-bit) of the system it is executed on, and prints a corresponding message. The script uses the cpuid instruction to check bit 29 of the EDX register, which indicates whether the architecture is 32-bit or 64-bit.
 
@@ -7,7 +7,7 @@ The script works by executing the cpuid instruction to retrieve information abou
 To use the script, first compile the code using nasm and ld:
 
 ```bash
-nasm -f elf64 -o cpu_arch.o src/getArch.asm
+nasm -f elf64 -o cpu_arch.o src/cpuArch.asm
 ld -m elf_x86_64 -s -o cpu_arch.bin cpu_arch.o
 ```
 
